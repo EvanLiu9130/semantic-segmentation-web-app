@@ -12,6 +12,10 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
-      }
+      },
+      // ** 在這裡添加 build 配置 **
+      build: {
+        target: 'esnext', // 設置為 esnext 以支持 Top-level await
+      },
     };
 });
